@@ -8,7 +8,7 @@ import CartContext from '../../store/cart-context';
 const Cart = props => {
     const cartCtx = useContext(CartContext);
 
-    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+    const totalAmount = `#${cartCtx.totalAmount.toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
 
     const cartItemRemoveHandler = (id) => {
@@ -21,6 +21,7 @@ const Cart = props => {
 
 
     const cartItems = (
+        // cart-items is wrapped in square bracket [] because the css class has dash (-) in it.
         <ul className={classes['cart-items']}>
             {cartCtx.items.map((item) => (
                 <CartItem

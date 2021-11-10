@@ -32,6 +32,7 @@ const HeaderCartButton = props => {
     }, [items]);
 
     return ( 
+        //onClick props  is passed from header.js which was passed from app.js 
     <button className={btnClasses} onClick={props.onClick}>
       <span className={classes.icon}>
           <CartIcon />

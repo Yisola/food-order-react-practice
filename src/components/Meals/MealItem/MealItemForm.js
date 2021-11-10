@@ -30,12 +30,14 @@ const MealItemForm = props => {
             <Input
                 ref={amountInputRef}
                 label="Amount"
+                // double curly braces because I am passing in an object
                 input={{
                     id: 'amount_' + props.id,
                     type: 'number',
                     min: '1',
                     max: '5',
                     step: '1',
+                    // initial value with which input is populated
                     defaultValue: '1'
                 }} />
             <button>+ Add</button>
